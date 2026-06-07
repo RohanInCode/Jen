@@ -13,7 +13,7 @@ pipeline{
         }
         stage('Deploy'){
             steps{
-                echo 'Deploying the application...'
+                bat 'docker run -d -p 8082:8080'
             }
         }
     }
